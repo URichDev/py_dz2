@@ -1,5 +1,7 @@
 #Дана строка. Определить, содержит ли строка только символы 'a', 'b', 'c' или нет.
 
+s = input('Type string: ')
+
 def include_simbol(s):
     i=0
     k=0
@@ -14,4 +16,4 @@ def include_simbol(s):
     if k == len(s):
         print('The string contains only a, b, с')
 
-include_simbol('aabbcc')
+include_simbol(s)

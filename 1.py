@@ -2,6 +2,9 @@
 import string
 import random
 
+length = input('How long will the email be? ')
+domein = input('What domain will the email have? ')
+
 def gen_email(length, domain):
     letter_list = string.ascii_lowercase
 
@@ -14,4 +17,4 @@ def gen_email(length, domain):
     s += '@'+domain
     print(s)
 
-gen_email(10, 'gmail.com')
+gen_email(int(length), domein)
