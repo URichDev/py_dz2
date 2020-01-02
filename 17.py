@@ -3,8 +3,7 @@
 s = input('Type string: ')
 
 def find_3(s):
-    s = s[2:]
-    s = s[::3]
+    s = s[2::3]
     print(s)
 
 find_3(s)
