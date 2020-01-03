@@ -15,15 +15,17 @@ def new_sstring(s):
         letter_list = list(string.ascii_lowercase)
 
         fragment = s[i:i+3]
-        letter_list.remove(fragment[0])
-        letter_list.remove(fragment[2])
-        let = letter_list[random.randint(1,len(letter_list))]
+        if len(fragment) == 3:
+            letter_list.remove(fragment[0])
+            letter_list.remove(fragment[2])
+            let = letter_list[random.randint(0,len(letter_list)-1)]
+            fragment = fragment.replace(fragment[1],str(let[0]))
+            s_list.append(fragment)
+        else:
+            s_list.append(fragment)
 
-        fragment[1] = let
-
-        s_list.append(fragment)
         i+=3
-        print(fragment)
+        s_list.sort()
 
     print(s_list)
 
